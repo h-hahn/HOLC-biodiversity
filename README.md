@@ -1,4 +1,4 @@
-# The Impact of Historical HOLC Redlining on Society and Biodiversity
+# The Impact of Historical HOLC Redlining on Living Conditions and Biodiversity
 
 This repository contains an analysis on redlining in Los Angeles and how it impacts living conditions and biodiversity. Using EJScreen, historical redlining, and biodiversity observation data, I look at the relationship between historical redlining neighbourhoods and how it impacts the the living conditions of census groups living there today. Additionally, using bird observation data, I look at how biodiversity observations differ among historically redlining census block groups.
 
