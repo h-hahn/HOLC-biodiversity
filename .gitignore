@@ -1,3 +1,6 @@
+# data folder
+/data
+
 .DS_store
 
 # History files
