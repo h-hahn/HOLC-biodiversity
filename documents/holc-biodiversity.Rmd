@@ -6,7 +6,7 @@ date: "2023-12-14"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(include = TRUE, message = FALSE, warning = FALSE, error = FALSE)
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, error = FALSE)
 ```
 
 ## Overview
