@@ -516,10 +516,13 @@ tm_shape(los_angeles) + # los angeles data
 <p><strong><em>Understanding Characteristics of Census Groups in
 LA</em></strong></p>
 <p>To better understand the characteristics of Los Angeles, I performed
-calculations to find the percent of census groups in Los Angeles that: *
-have less than 5% of the population considered low income * above the
-80th percentile for Particulate Matter 2.5 and above the 80th percentile
-for Superfund proximity.</p>
+calculations to find the percent of census groups in Los Angeles
+that:</p>
+<ul>
+<li>have less than 5% of the population considered low income</li>
+<li>above the 80th percentile for Particulate Matter 2.5 and above the
+80th percentile for Superfund proximity.</li>
+</ul>
 <p>In order to get these calculations, I filtered for the observations
 that had these specific values and divided by the total number of
 observations. I found that 6.11% of the census block groups have less
@@ -598,8 +601,13 @@ nrow(redline_block)</code></pre>
 Groups</em></strong></p>
 <p>With the new dataset including the historically redlining census
 block groups, I summarized the current conditions by taking the means
-of: * percent low income * percentile for PM 2.5 * percentile for low
-life expectancy * percentile for air toxics cancer risk</p>
+of:</p>
+<ul>
+<li>percent low income</li>
+<li>percentile for PM 2.5</li>
+<li>percentile for low life expectancy</li>
+<li>percentile for air toxics cancer risk</li>
+</ul>
 <p>Each mean was taken by HOLD grade. These results showed that as the
 HOLC grades go from A to D, the mean percent of low income increases as
 well as mean PM 2.5. Additionally the mean of the percentile of low life
@@ -613,12 +621,14 @@ worse environmental conditions.</p>
 <pre class="r"><code># means by HOLC grade
 LA &lt;- st_intersection(LA_redlining, los_angeles)
 
-LA %&gt;% 
+summary_la &lt;- LA %&gt;% 
   group_by(grade) %&gt;% 
   summarise(mean_lowinc = mean(LOWINCPCT * 100, na.rm = TRUE), 
             mean_pm = mean(P_PM25, na.rm = TRUE), 
             mean_lifepct = mean(P_LIFEEXPPCT, na.rm = TRUE),
-            mean_cancerpct = mean(P_CANCER, na.rm = TRUE))</code></pre>
+            mean_cancerpct = mean(P_CANCER, na.rm = TRUE))
+
+print(summary_la)</code></pre>
 <pre><code>## Simple feature collection with 5 features and 5 fields
 ## Geometry type: MULTIPOLYGON
 ## Dimension:     XY
