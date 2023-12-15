@@ -132,7 +132,7 @@ tm_shape(los_angeles) + # los angeles data
 
 ***Understanding Characteristics of Census Groups in LA***
 
-To better understand the characteristics of Los Angeles, I performed calculations to find the percent of census groups in Los Angeles that: 
+To better understand the living conditions of Los Angeles, I performed calculations to find the percent of census groups in Los Angeles that: 
 
 * have less than 5% of the population considered low income 
 * above the 80th percentile for Particulate Matter 2.5 and above the 80th percentile for Superfund proximity.
@@ -203,14 +203,14 @@ nrow(redline_block)
 
 ***Summary of Historically Redlining Census Block Groups***
 
-With the new dataset including the historically redlining census block groups, I summarized the current conditions by taking the means of:
+The historical redlining data allowed us to understand how historical patterns still influence today's living conditions. With the new dataset including the historically redlining census block groups, I summarized the current conditions by taking the means of:
 
 * percent low income
 * percentile for PM 2.5
 * percentile for low life expectancy
 * percentile for air toxics cancer risk
 
-Each mean was taken by HOLD grade. These results showed that as the HOLC grades go from A to D, the mean percent of low income increases as well as mean PM 2.5. Additionally the mean of the percentile of low life expectancy and mean percentile of air toxic cancer risk increases from A through D. This means that as the HOLC grades become "lower", environmental issues seemingly become more prevalent and health risks increase. There are higher rates of low income in "lower" HOLC grades, and higher air particulates and cancer risk. The amount of people with lower life expectancy increases as well, likely due to increasingly worse environmental conditions.
+Each mean was taken by HOLC grade. These results showed that as the HOLC grades go from A to D, the mean percent of low income increases as well as mean PM 2.5. Additionally the mean of the percentile of low life expectancy and mean percentile of air toxic cancer risk increases from A through D. This means that as the HOLC grades become "lower", environmental issues seemingly become more prevalent and health risks increase. There are higher rates of low income in "lower" HOLC grades, and higher air particulates and cancer risk. The amount of people with lower life expectancy increases as well, likely due to increasingly worse environmental conditions.
 
 ```{r }
 # means by HOLC grade
