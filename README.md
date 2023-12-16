@@ -6,9 +6,8 @@ This repository contains an analysis on redlining in Los Angeles and how it impa
 This analysis allows us to understand how historical patterns of injustice shapes demographic and environmental conditions of today.
 
 ## About the Data
-**EJScreen**
-
-Data from the United States Environmental Protection Agency's EJScreen: Environmental Justice Screening and Mapping Tool. EJScreen provides on environmental and demographic information for the US at the Census [tract](https://en.wikipedia.org/wiki/Census_tract) and [block group](https://en.wikipedia.org/wiki/Census_block_group) levels. 
+* **EJScreen**
+  * Data from the United States Environmental Protection Agency's EJScreen: Environmental Justice Screening and Mapping Tool. EJScreen provides on environmental and demographic information for the US at the Census [tract](https://en.wikipedia.org/wiki/Census_tract) and [block group](https://en.wikipedia.org/wiki/Census_block_group) levels. 
 
 **Mapping Inequality**
 
