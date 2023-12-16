@@ -11,6 +11,8 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, error = FAL
 
 ## Overview
 
+------------------------------------------------------------------------
+
 #### *Background*
 
 Present-day environmental justice may reflect legacies of injustice in the past. The United States has a long history of racial segregation which is still visible. During the 1930's the Home Owners' Loan Corporation (HOLC), as part of the New Deal, rated neighborhoods based on their perceived safety for real estate investment. Their ranking system, (A (green), B (blue), C (yellow), D (red)) was then used to block access to loans for home ownership. Colloquially known as "redlining", this practice has had widely-documented consequences not only for community wealth, but also health.[^1] Redlined neighborhoods have less greenery[^2] and are hotter than other neighborhoods.[^3]
@@ -49,15 +51,17 @@ The [Global Biodiversity Information Facility](gbif.org) is the largest aggregat
 
 #### *Highlights of Analysis*
 
-* Investigate the legacy of redlining
-  * Visualize wastewater discharge by census block groups
-  * Calulate percentage of census groups based on certain conditions
-  * Visualize historical redlining boundaries
-  * Summarizing historical redlining communities
-* Investigate the legacy of redlining in biodiversity observations
-  * Visualize percentage of bird observations in redlining communities
+-   Investigate the legacy of redlining
+    -   Visualize wastewater discharge by census block groups
+    -   Calulate percentage of census groups based on certain conditions
+    -   Visualize historical redlining boundaries
+    -   Summarizing historical redlining communities
+-   Investigate the legacy of redlining in biodiversity observations
+    -   Visualize percentage of bird observations in redlining communities
 
 ## Analysis
+
+------------------------------------------------------------------------
 
 #### Investigate the legacy of redlining in current environmental (in)justice
 
@@ -119,10 +123,10 @@ tm_shape(los_angeles) + # los angeles data
 
 ***Understanding Characteristics of Census Groups in LA***
 
-To better understand the living conditions of Los Angeles, I performed calculations to find the percent of census groups in Los Angeles that: 
+To better understand the living conditions of Los Angeles, I performed calculations to find the percent of census groups in Los Angeles that:
 
-* have less than 5% of the population considered low income 
-* above the 80th percentile for Particulate Matter 2.5 and above the 80th percentile for Superfund proximity.
+-   have less than 5% of the population considered low income
+-   above the 80th percentile for Particulate Matter 2.5 and above the 80th percentile for Superfund proximity.
 
 In order to get these calculations, I filtered for the observations that had these specific values and divided by the total number of observations. I found that 6.11% of the census block groups have less than 5% of the population considered low income, and 17.4% of census block groups are above the 80th percentile for PM 2.5 and above the 80th percentile for Superfund proximity.
 
@@ -192,10 +196,10 @@ nrow(redline_block)
 
 The historical redlining data allowed us to understand how historical patterns still influence today's living conditions. With the new dataset including the historically redlining census block groups, I summarized the current conditions by taking the means of:
 
-* percent low income
-* percentile for PM 2.5
-* percentile for low life expectancy
-* percentile for air toxics cancer risk
+-   percent low income
+-   percentile for PM 2.5
+-   percentile for low life expectancy
+-   percentile for air toxics cancer risk
 
 Each mean was taken by HOLC grade. These results showed that as the HOLC grades go from A to D, the mean percent of low income increases as well as mean PM 2.5. Additionally the mean of the percentile of low life expectancy and mean percentile of air toxic cancer risk increases from A through D. This means that as the HOLC grades become "lower", environmental issues seemingly become more prevalent and health risks increase. There are higher rates of low income in "lower" HOLC grades, and higher air particulates and cancer risk. The amount of people with lower life expectancy increases as well, likely due to increasingly worse environmental conditions.
 
@@ -213,12 +217,11 @@ summary_la <- LA %>%
 print(summary_la)
 ```
 
-
 #### Investigate the legacy of redlining in biodiversity observations
 
 ***Visualize % of Observations in Redlining***
 
-After reading in the bird observation data, I saw that the CRS is not the same between the bird data and redlining data; I converted the bird data into the same CRS as the redlining data so I could find the percent of observations within each redlining category in 2022. I found where the two datasets intersected, saving it into a new dataframe, and then found the percentage of observations by HOLC grade. I plotted the percentages into a bar plot, to visualize the percentage of observations in relation to the other HOLC grades. 
+After reading in the bird observation data, I saw that the CRS is not the same between the bird data and redlining data; I converted the bird data into the same CRS as the redlining data so I could find the percent of observations within each redlining category in 2022. I found where the two datasets intersected, saving it into a new dataframe, and then found the percentage of observations by HOLC grade. I plotted the percentages into a bar plot, to visualize the percentage of observations in relation to the other HOLC grades.
 
 The results are surprising because there are higher percent of observations in "lower" HOLC grades than "higher" HOLC grades. This is surprising because one would expect more observations to occur in "better" neighborhoods. As mentioned earlier in the assignment, "lower" HOLC grades have less greenspace, so one would assume there are more birds. A potential implication is that the streets/outdoor spaces in lower HOLC grades have more debris that attract more birds.
 
@@ -258,5 +261,3 @@ ggplot(bird_redline,
        y = "Percent Bird Observations") + 
   theme_minimal() 
 ```
-
-
