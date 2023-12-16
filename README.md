@@ -17,7 +17,7 @@ This analysis allows us to understand how historical patterns of injustice shape
 **Biodiversity observations**
 * The [Global Biodiversity Information Facility](gbif.org) is the largest aggregator of biodiversity observations in the world. Observations typically include a location and date that a species was observed. 
 
-The data files were too large to be pushed to this repository, but can be accessed [here](https://drive.google.com/file/d/1lcazRbNSmP8Vj9sH1AIJcO4D1d_ulJij/view?usp=share_link) to save locally.
+The data files were too large to be pushed to this repository, but can be accessed [here](https://drive.google.com/file/d/1lcazRbNSmP8Vj9sH1AIJcO4D1d_ulJij/view?usp=share_link) to save locally into a data folder. The data folder is already added to the .gitignore as 'data/'.
 The redlining data can be read in using this link: https://dsl.richmond.edu/panorama/redlining/static/citiesData/CALosAngeles1939/geojson.json.
 
 ### Structure
