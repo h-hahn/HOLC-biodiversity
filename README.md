@@ -3,6 +3,8 @@
 ## Overview
 This repository contains an analysis on redlining in Los Angeles and how it impacts living conditions and biodiversity. Using EJScreen, historical redlining, and biodiversity observation data, I look at the relationship between historical redlining neighbourhoods and how it impacts the the living conditions of census groups living there today. Additionally, using bird observation data, I look at how biodiversity observations differ among historically redlining census block groups.
 
+This analysis allows us to understand how historical patterns of injustice shapes demographic and environmental conditions of today.
+
 ## About the Data
 **EJScreen**
 
