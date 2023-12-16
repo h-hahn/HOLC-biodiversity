@@ -31,6 +31,8 @@ A recent study found that redlining has not only affected the environments commu
 
 Check out coverage by [EOS](https://eos.org/articles/bird-biodiversity-reports-reflect-cities-redlined-past?utm_source=EosBuzz&mkt_tok=OTg3LUlHVC01NzIAAAGOx3ckQPpeDY3QyFKdUnBSYqILj3qLrgb_Q2lasphwcF90xEzMgjZFUo3NHsw3caXDcZe6I8D8qdVsSRr3wzhb6LKAQRgNo8ffhjieEbDwMw).
 
+In this analysis, I aim to understand how historical patterns of injustice shapes demographic and environmental conditions of today.
+
 #### *Data*
 
 **EJScreen**
